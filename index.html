@@ -12,14 +12,110 @@
     <!-- Your code goes here -->
     <div class="container">
       <div class="image-div">
-        <img class="myImage"
-          src="./assets/Rectangle2.png" alt="prod"
-        />
+        <div class="mainImage">
+          <img class="myImage" src="./assets/main.png" alt="prod" />
+        </div>
+        <div class="thumbnail">
+          <img src="./assets/Rectangle1.png" />
+          <img src="./assets/Rectangle2.png" />
+          <img src="./assets/Rectangle3.png" />
+          <img src="./assets/Rectangle4.png" />
+        </div>
       </div>
+
       <div class="desc-div">
         <!-- data inserted dynamically by Js -->
+        <div class="heading">
+          <p>Marmeto</p>
+          <h2>Embrace Sideboard</h2>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="price-div">
+          <div>
+            <div class="actualPrice">$12999.00</div>
+            <div class="discPrice"><strike>$19999.00</strike></div>
+          </div>
+          <div class="discount"></div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="color">
+          <p>Choose a Color</p>
+          <div class="checkbox-container">
+            <label class="custom-checkbox" id="a">
+              <input type="checkbox" name="color" value="green">
+              <span class="checkmark"></span>
+            </label>
+            <label class="custom-checkbox" id="b">
+              <input type="checkbox" name="color" value="red">
+              <span class="checkmark"></span>
+            </label>
+            <label class="custom-checkbox" id="c">
+              <input type="checkbox" name="color" value="green">
+              <span class="checkmark"></span>
+            </label>
+            <label class="custom-checkbox" id="d">
+              <input type="checkbox" name="color" value="green">
+              <span class="checkmark"></span>
+            </label>
+            
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="size">
+          <p>Choose a Size</p>
+          <div class="radio-Container">
+            <div class="radio-div">
+              <input type="radio" class="choose" name="size"/>
+              <label>Small</label>
+            </div>
+            <div class="radio-div">
+              <input type="radio" class="choose" name="size"/>
+              <label>Medium</label>
+            </div>
+            <div class="radio-div">
+              <input type="radio" class="choose" name="size"/>
+              <label>Large</label>
+            </div>
+            <div class="radio-div">
+              <input type="radio" class="choose" name="size"/>
+              <label>Extra Large</label>
+            </div>
+            <div class="radio-div">
+              <input type="radio" class="choose" name="size"/>
+              <label>XXL</label>
+            </div>
+            
+          </div>
+          <div class="btn">
+            <div class="itembtn">
+              <button class="sub">-</button>
+              <span class="count">1</span>
+              <button class="add">+</button>
+            </div>
+            <button class="cartBtn">Add To Cart</button>
+          </div>
+          <div class="cartinfo">Embrace Sideboard with Color Yellow and Size Small added to cart</div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="footer">
+          The Embrace Sideboard is a stylish wear. With a top cloth designed to
+          provide superior protection and look great, this storage solution is
+          both functional and attractive. It fits seamlessly into any home
+          decor, with clean lines and a timeless look. Crafted from premium
+          materials for a combination of style, durability, and reliability.
+        </div>
+
       </div>
     </div>
+
     <!-- Happy coding 😊 -->
     <script src="./script.js"></script>
   </body>
