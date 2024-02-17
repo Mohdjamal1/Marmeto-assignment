@@ -1,6 +1,6 @@
 const url ="https://cdn.shopify.com/s/files/1/0564/3685/0790/files/singleProduct.json";
 let product = {};
-let productCount = 0;
+let productCount = 1;
 let size = "";
 let color = "";
 
@@ -48,9 +48,9 @@ function selectColor() {
       color = checkbox.value;
       // Uncheck other checkboxes when one is checked
       if (this.checked) {
-        checkboxes.forEach((cb) => {
-          if (cb !== this) {
-            cb.checked = false;
+        checkboxes.forEach((item) => {
+          if (item !== this) {
+            item.checked = false;
           }
         });
       }
@@ -72,7 +72,7 @@ selectSize();
 
 //Decrease the product count
 document.querySelector(".sub").addEventListener("click", function () {
-  if (productCount > 0) {
+  if (productCount > 1) {
     productCount = productCount - 1;
     document.querySelector(".count").innerText = `${productCount}`;
   }
@@ -90,7 +90,11 @@ document.querySelector(".count").innerText = `${productCount}`;
 
 // Add to cart message div
 document.querySelector(".cartBtn").addEventListener("click", function () {
+  if(color !== "" && size !== ""){
   const cartinfo = document.querySelector(".cartinfo");
-  cartinfo.innerText = `${product.title} with Color ${color} and Size ${size} added to cart`;
+  cartinfo.innerText = `${product.title} with Color ${color} and Size ${size} with ${productCount} item added to cart`;
   cartinfo.style.display = "block";
+  }else{
+    alert('Please select Color and Size of product');
+  }
 });
